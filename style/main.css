@@ -1,0 +1,67 @@
+:root { /* criar variaveis, facilitar troca de caracteristicas */
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0; /* resetar margens definidas pelo browser */
+    padding: 0;
+    box-sizing: border-box; /* manter a medida da caixa */ 
+}
+
+
+/* elementos básicos */
+
+body {
+    background: var(--preto);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header .container {
+    display: flex; /* jogar tudo como linha */
+    flex-direction: row; /* o flex já coloca como row, mas deixando para ilustrar o uso */
+    align-items: center; /* centralizando na vertical */
+    justify-content: space-between; /* distribui os items em todo o espaço disponivel */
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none; /* tira sublinhado/cor padrão de link */ 
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+
+/* filme principal */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+
+    height: 400px;
+    background-size: cover; /* preenche a area */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
+
+.titulo {
+    font-size: 40px;
+}
